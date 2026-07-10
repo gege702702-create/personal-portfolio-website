@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Jana Alzahrani — Personal Website</title>
+<style>
+  :root{
+    --ink:#12131a;
+    --paper:#f7f6f2;
+    --accent:#3b5bfd;
+    --accent-soft:#e8ecff;
+    --muted:#6b6d78;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth; background:#f7f6f2;}
+  body{
+    font-family:'Segoe UI',Tahoma,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.7;
+  }
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(247,246,242,0.9);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid #e4e2da;
+  }
+  nav{
+    max-width:1000px; margin:0 auto;
+    display:flex; justify-content:space-between; align-items:center;
+    padding:18px 24px;
+  }
+  .logo{font-weight:800; font-size:1.2rem;}
+  nav ul{display:flex; gap:28px; list-style:none;}
+  nav a{color:var(--ink); text-decoration:none; font-size:.95rem; transition:color .2s;}
+  nav a:hover{color:var(--accent);}
+
+  section{max-width:1000px; margin:0 auto; padding:90px 24px;}
+
+  #hero{
+    min-height:80vh; display:flex; flex-direction:column;
+    justify-content:center; padding-top:60px;
+  }
+  #hero .eyebrow{color:var(--accent); font-weight:700; letter-spacing:.5px; margin-bottom:14px;}
+  #hero h1{font-size:clamp(2.2rem,6vw,3.6rem); font-weight:800; margin-bottom:18px;}
+  #hero p{max-width:560px; color:var(--muted); font-size:1.1rem; margin-bottom:32px;}
+  .btn{
+    display:inline-block; background:var(--ink); color:#fff;
+    padding:14px 28px; border-radius:6px; text-decoration:none;
+    font-weight:700; transition:transform .2s, background .2s;
+  }
+  .btn:hover{background:var(--accent); transform:translateY(-2px);}
+  .btn.ghost{background:none; border:2px solid var(--ink); color:var(--ink); margin-inline-start:14px;}
+  .btn.ghost:hover{border-color:var(--accent); color:var(--accent);}
+
+  h2{font-size:2rem; font-weight:800; margin-bottom:36px;}
+  h2 span{color:var(--accent);}
+
+  #about .about-grid{display:grid; grid-template-columns:1fr 1.2fr; gap:50px; align-items:start;}
+  #about .avatar{
+    width:100%; aspect-ratio:1; border-radius:14px;
+    background:linear-gradient(135deg,var(--accent),#12131a);
+    display:flex; align-items:center; justify-content:center;
+    color:#fff; font-size:3rem; font-weight:800;
+  }
+  #about p{color:var(--muted); margin-bottom:16px;}
+
+  .skills{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;}
+  .skills span{
+    background:var(--accent-soft); color:var(--accent);
+    padding:8px 16px; border-radius:999px; font-size:.9rem; font-weight:700;
+  }
+
+  #projects .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
+  .card{
+    background:#fff; border:1px solid #e4e2da; border-radius:12px;
+    padding:26px; transition:box-shadow .2s, transform .2s;
+  }
+  .card:hover{box-shadow:0 12px 30px rgba(0,0,0,.08); transform:translateY(-4px);}
+  .card h3{font-size:1.2rem; margin-bottom:10px;}
+  .card p{color:var(--muted); font-size:.95rem; margin-bottom:16px;}
+  .card a{color:var(--accent); font-weight:700; text-decoration:none; font-size:.9rem;}
+
+  #contact{text-align:center;}
+  #contact p{color:var(--muted); margin-bottom:26px;}
+  .contact-links{display:flex; justify-content:center; gap:18px; flex-wrap:wrap;}
+  .contact-links a{
+    color:var(--ink); text-decoration:none; border:1px solid #d9d7cf;
+    padding:10px 20px; border-radius:8px; font-weight:700; transition:.2s;
+  }
+  .contact-links a:hover{border-color:var(--accent); color:var(--accent);}
+
+  footer{text-align:center; padding:30px 24px; color:var(--muted); font-size:.85rem;}
+
+  @media(max-width:720px){
+    nav ul{display:none;}
+    #about .about-grid, #projects .grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Jana Alzahrani</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="hero">
+  <div class="eyebrow">Hi, I'm</div>
+  <h1>Jana Abdulrahman Alzahrani</h1>
+  <p>A front-end enthusiast passionate about building simple, clean websites with HTML and CSS. This is my personal portfolio where I showcase myself and my projects.</p>
+  <div>
+    <a class="btn" href="#projects">View My Work</a>
+    <a class="btn ghost" href="#contact">Contact Me</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About <span>Me</span></h2>
+  <div class="about-grid">
+    <div class="avatar">JA</div>
+    <div>
+      <p>I'm a student in the Web track of the Smart Methods program, currently learning to design web pages using HTML and CSS. I enjoy learning by building small projects that grow my skills step by step.</p>
+      <p>This website is my first project, and I'm continuing to improve it.</p>
+      <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Git & GitHub</span>
+        <span>Problem Solving</span>
+      </div>
+      <p style="margin-top:16px;"><strong>University ID:</strong> 44451709</p>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>My <span>Projects</span></h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Personal Website (this project)</h3>
+      <p>A simple introductory website built with HTML and CSS, showcasing my information, skills, and contact details.</p>
+      <a href="#">View Code on GitHub ↗</a>
+    </div>
+    <div class="card">
+      <h3>Upcoming Project</h3>
+      <p>Description of my next project will be added here once completed.</p>
+      <a href="#">Coming Soon</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Get In <span>Touch</span></h2>
+  <p>Have a question or an idea to collaborate on? Reach me through any of the following.</p>
+  <div class="contact-links">
+    <a href="mailto:Gege702702@gmail.com">Gege702702@gmail.com</a>
+    <a href="https://github.com/username" target="_blank">GitHub</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Jana Alzahrani — Built with HTML & CSS.
+</footer>
+
+</body>
+</html>
